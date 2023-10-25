@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');
+
+ body {
+  
+  font-family: sans-serif;
+ }
+
+.popup .content {
+ position: absolute;
+ top: 175vw;
+ left: 50%;
+ transform: translate(-50%,-150%) scale(0);
+ width: 50vw;
+ height: 30vw;
+ z-index: 2;
+ text-align: center;
+ padding: 10px;
+ border-radius: 5px;
+ background: #dfdfdf;
+ 
+ z-index: 1;
+}
+
+.popup .close-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 2vw;
+    height: 2vw;
+    color: white;
+    font-size: 2.5vw;
+    border-radius: 50%;
+    padding: 2px 5px 7px 5px;
+   
+}
+
+.popup.active .content {
+transition: all 300ms ease-in-out;
+transform: translate(-50%,-50%) scale(1);
+}
+
+
+.popup .content2 {
+  position: absolute;
+  top: 138vw;
+  left: 50%;
+  transform: translate(-50%,-150%) scale(0);
+  width: 50vw;
+  height: 20vw;
+  z-index: 2;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+ background-color:  #b5bc89;
+  
+  z-index: 1;
+ }
+
+ .content2 img {
+  height: 100%;
+  width: 100%;
+}
+ 
+ .popup .close-btn {
+     position: absolute;
+     right: 5px;
+     top: 5px;
+     width: 2vw;
+     height: 2vw;
+     color: gray;
+     font-size: 2.5vw;
+     border-radius: 50%;
+     padding: 2px 5px 7px 5px;
+    
+ }
+ 
+ .popup.active .content2 {
+ transition: all 300ms ease-in-out;
+ transform: translate(-50%,-50%) scale(1);
+ 
+ }
+h1 {
+ text-align: center;
+ font-size: 32px;
+ font-weight: 600;
+ padding-top: 20px;
+ padding-bottom: 10px;
+ color: rgb(91, 91, 92);
+}
+
+a {
+ font-weight: 600;
+ color: rgb(19, 50, 225);
+}
+
+.input-field .validate {
+padding: 20px;
+font-size: 16px;
+border-radius: 5px;
+border: none;
+margin-bottom: 15px;
+color: #000000;
+background: #ffffff;
+border: 2px solid rgb(214, 214, 214);
+width: 270px;
+outline: none;
+}
+
+
+.content .search-input {
+  width: 29vw;
+  position: absolute;
+  top: 1.5vw;
+  left: 12vw;
+  height: 2vw;
+  padding: 1vw;
+  font-size: 2vw;
+  font-family: "Heebo", sans-serif;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+.first-button {
+    -webkit-text-stroke: 1px #f0f0f0;
+    font-size: 2.5vw;
+    font-weight: 500;
+    padding: 15px 50px;
+    
+    right: 3px;
+    border-radius: var(--br-xl);
+    border: 1px dashed var(--color-whitesmoke);
+    box-sizing: border-box;
+    
+    position: absolute;
+    top: 157vw;
+    width: 80vw;
+    height: 10vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    background-color: #0a2628;
+    transition: box-shadow .35s ease !important;
+    outline: none;
+}
+
+
+.first-button:active {  
+background-color: rgb(2, 42, 112);
+color: #fff;
+border: none;
+}
+
+.second-button {
+color: white;
+font-size: 18px;
+font-weight: 500;
+margin-top: 20px;
+padding: 15px 40px;
+border-radius: 5px;
+border: none;
+background: #05438f;
+ 
+transition: box-shadow .35s ease !important;
+outline: none;
+}
+
+.second-button:active{
+background: linear-gradient(145deg,#222222, #292929);
+ 
+border: none;
+outline: none;
+}
+p{
+color: #141414;
+padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form__group {
+    position: relative;
+    top: 69vw;
+    left: 8vw;
+    padding: 3px 0 0;
+    /* margin-top: 10px; */
+    width: 90%;
+}
+.form___group {
+    position: absolute;
+    top: 85vw;
+    left: 8vw;
+    padding: 3px 0 0;
+    /* margin-top: 10px; */
+    width: 90%;
+}
+  
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 3.5vw;
+    color: #fff;
+    
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  .form__field::placeholder {
+    color: transparent;
+  }
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 4vw;
+    cursor: text;
+    
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+  }
+  
+  .form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
+  }
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #11998e;
+    font-weight: 700;
+  }
+  
+  /* reset input */
+  .form__field:required, .form__field:invalid {
+    box-shadow: none;
+  }
+  
+  /* demo */
+  body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1rem;
+    background-color: #222222;
+  }
+
+  
+  .selection-info {
+    position: absolute;
+    top: 7px;
+    left: 16vw;
+    font-size: 1.5vw;
+}
+
+
+
+
+
+
+
+  
+  
+  
+  
+  .centered2 .group1 {
+    width: 100%;
+    height: 10vw;
+    top: 68vw;
+    left: 7.5vw;
+    overflow: hidden;
+    position: relative;
+  }
+  .centered .group2 {
+    width: 100%;
+    height: 10vw;
+    top: 82.5vw;
+    left: 8vw;
+    overflow: hidden;
+    position: absolute;
+}
+  
+  .group1 label {
+    position: absolute;
+    top: 3.5vw;
+    color: rgba(255, 255, 255, 0.5);
+    font: 400 3.5vw Roboto;
+    cursor: text;
+    transition: 0.25s ease;
+  }
+
+  .group2 label {
+    position: absolute;
+    top:3.5vw;
+    color: rgba(255, 255, 255, 0.5);
+    font: 400 3.5vw Roboto;
+    cursor: text;
+    transition: 0.25s ease;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    padding-top: 4.5vw;
+    border: none;
+    border-radius: 0;
+    color: white;
+    background: #0a2628;
+    font-size: 3.5vw;
+    transition: 0.3s ease;
+  }
+  input:valid ~ label {
+    top: 0;
+    font: 700 22px Roboto;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  input:focus {
+    outline: none;
+  }
+  input:focus ~ label {
+    top: 0;
+    font: 700 22px Roboto;
+    color: #2196f3;
+  }
+  input:focus ~ .bar:before {
+    transform: translateX(0);
+  }
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #333 inset;
+    -webkit-text-fill-color: white !important;
+  }
+  
+  .bar {
+    background: rgba(255, 255, 255, 0.5);
+    content: "";
+    width: 90%;
+    height: 3.6666666667px;
+    transition: 0.3s ease;
+    position: relative;
+  }
+  .bar:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    background: #2196f3;
+    transform: translateX(-100%);
+  }
+  
+  ::selection {
+    background: rgba(33, 150, 243, 0.3);
+  }
+
+
+
+
+
+
+
+
+  .select {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    position: absolute;
+    left: 11vw;
+    width: 30vw;
+    height: 18vw;
+    top: 9vw;
+    gap: 1vw;
+}
+
+
+
+@media (max-width: 600px) {
+  .group1 label {
+    position: absolute;
+    top: 3.5vw;
+    color: rgba(255, 255, 255, 0.5);
+    font: 400 1.5vw Roboto;
+    cursor: text;
+    transition: 0.25s ease;
+    font-size: 1rem; /* Add this line to set a fixed font size for the label */
+  }
+
+
+
+  .form__field:focus ~ .form__label,
+.form__field:valid ~ .form__label {
+  top: -15px; /* Move the label up */
+  font-size: 1vw; /* Set a fixed font size for the label */
+  color: #11998e; /* Change the label color */
+  font-weight: 700; /* Optionally, make the label bold */
+}
+
+}

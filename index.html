@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="c.css" />
+    <script src="j.js"></script>
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="p.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Satoshi:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    
+    <div class="register-page">
+      <div class="container">
+      <div class="register-page-child"></div>
+      <img class="dsc-0267-icon" alt="" src="./public/dsc-0267@2x.png" />
+
+      <img class="register-page-item" alt="" src="./public/frame-23.svg" />
+
+      <div class="vector-parent">
+        <img class="arrow-icon" alt="" src="./public/arrow-7.svg" />
+
+        <b class="back">Back</b>
+
+      </div>
+      
+
+      
+      </div>
+      
+     <div class="container2">
+      <b class="compitition-name">COMPITITION NAME</b>
+      <div class="rectangle-parent">
+        <div class="group-item"></div>
+        <b class="guidelines">GUIDELINES</b>
+        <b onclick="togglePopup1()" class="guidelines">GUIDELINES</b>
+        <img class="group-inner" alt="" src="./public/arrow-3.svg" />
+      </div>
+
+      <b class="add-members-min">Add Members (Min. 5 - Max. 10)</b>
+      <b class="previous-performances">Previous Performance(s)</b>
+      <b class="description">Description</b>
+      <body translate="no">
+        <div class="centered2">
+        <div class="group1">
+          <input type="text" id="name" required="required"/>
+          <label for="name">Name</label>
+          <div class="bar"></div>
+        </div>
+      </div>
+      
+      
+      <body translate="no">
+        <div class="centered">
+        <div class="group2">
+          <input type="text" id="name" required="required"/>
+          <label for="name">Name</label>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <b class="note">Note</b>
+      <div class="add-members-parent">
+        <div class="add-members"></div>
+        <div class="group-child"></div>
+      </div>
+      <div class="our-team-will">
+        Our team will review and if everything is in order, your entry will be
+        approved. As and when your entry is approved, you will be notified via
+        mail and SMS.
+      </div>
+    
+       
+        <div class="integer-viverra-magna">
+          Integer viverra magna metus, eget ultricies odio euismod porttitor. Ut
+          at diam eget risus commodo tincidunt eget interdum risus. Ut facilisis
+          lacinia enim, eu tempus nulla faucibus et. Aenean iaculis orci eu
+          sodales congue. Curabitur sagittis vitae diam id dignissim. Sed
+          interdum ipsum vitae porttitor accumsan. Donec finibus sollicitudin
+          ultrices.
+        </div>
+     
+     
+
+      <b class="module">Module</b>
+      <div class="group-upto-x">Group (Upto x Members)</div>
+      <div class="on-ground">On Ground</div>
+      
+      
+      
+      
+      <img class="icon" alt="" src="./public/icon.svg" />
+
+      <img class="vector-icon" alt="" src="./public/vector.svg" />
+
+      
+
+
+
+    </div>
+    </div>
+
+    <img class="footer-icon" alt="" src="Footer.png" />
+
+
+    <div class="popup" id="popup-1">
+      <div class="content">
+
+        <body translate="no">
+          <input type="text" class="search-input" placeholder="Search...">
+          
+          <select name="language" class="custom-select" multiple>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+              <option value="sql">SQL</option>
+              <option value="kotlin">Kotlin</option>
+              <option value="kotlin">Kotlin</option>
+              <option value="kotlin">Kotlin</option>
+              <option value="kotlin">Kotlin</option>
+              <option value="kotlin">Kotlin</option>
+          </select>
+      
+          <div class="selection-info">0 out of 0 members selected</div>
+      
+          <button class="add-button">Add</button>
+      
+         
+      </body>
+       <div class="close-btn" onclick="togglePopup()">
+        ×</div>
+        
+   
+    
+         
+        
+      </div>
+     </div>
+
+     <div class="popup" id="popup-2">
+      <div class="content2">
+        <img src="Guidelines-PhotoRoom (1).png">
+
+       
+        <div class="close-btn" onclick="togglePopup1()">
+          ×</div>
+    
+         
+        
+      </div>
+     </div>
+     <button onclick="togglePopup()" class="first-button">Add Member(s)</button>
+     
+
+
+    
+
+
+     
+   
+  <script>
+    class CustomSelect {
+      constructor(originalSelect, searchInput) {
+          this.originalSelect = originalSelect;
+          this.customSelect = document.createElement("div");
+          this.customSelect.classList.add("select");
+          this.searchInput = searchInput;
+
+          this.originalSelect.querySelectorAll("option").forEach(optionElement => {
+              const itemElement = document.createElement("div");
+
+              itemElement.classList.add("select__item");
+              itemElement.textContent = optionElement.textContent;
+              this.customSelect.appendChild(itemElement);
+
+              if (optionElement.selected) {
+                  this._select(itemElement);
+              }
+
+              itemElement.addEventListener("click", () => {
+                  if (this.originalSelect.multiple && itemElement.classList.contains("select__item--selected")) {
+                      this._deselect(itemElement);
+                  } else {
+                      this._select(itemElement);
+                  }
+                  this.updateSelectionInfo();
+              });
+          });
+
+          this.originalSelect.insertAdjacentElement("afterend", this.customSelect);
+          this.originalSelect.style.display = "none";
+
+          this.selectionInfo = document.querySelector(".selection-info");
+          this.updateSelectionInfo();
+
+          // Add an event listener to the search input
+          this.searchInput.addEventListener("input", () => {
+              this.filterItems();
+          });
+      }
+
+      _select(itemElement) {
+          const index = Array.from(this.customSelect.children).indexOf(itemElement);
+
+          if (!this.originalSelect.multiple) {
+              this.customSelect.querySelectorAll(".select__item").forEach(el => {
+                  el.classList.remove("select__item--selected");
+              });
+          }
+
+          this.originalSelect.querySelectorAll("option")[index].selected = true;
+          itemElement.classList.add("select__item--selected");
+      }
+
+      _deselect(itemElement) {
+          const index = Array.from(this.customSelect.children).indexOf(itemElement);
+
+          this.originalSelect.querySelectorAll("option")[index].selected = false;
+          itemElement.classList.remove("select__item--selected");
+      }
+
+      updateSelectionInfo() {
+          const selectedCount = this.originalSelect.querySelectorAll("option:checked").length;
+          const totalCount = this.originalSelect.querySelectorAll("option").length;
+
+          this.selectionInfo.textContent = `${selectedCount} out of ${totalCount} members selected`;
+      }
+
+      filterItems() {
+          const searchQuery = this.searchInput.value.toLowerCase();
+          this.customSelect.querySelectorAll(".select__item").forEach(itemElement => {
+              const itemText = itemElement.textContent.toLowerCase();
+              if (itemText.includes(searchQuery)) {
+                  itemElement.style.display = "block";
+              } else {
+                  itemElement.style.display = "none";
+              }
+          });
+      }
+  }
+
+  const searchInput = document.querySelector(".search-input");
+  document.querySelectorAll(".custom-select").forEach(selectElement => {
+      new CustomSelect(selectElement, searchInput);
+  });
+</script>
+   
+    
+  </body>
+</html>

@@ -1,0 +1,68 @@
+.select {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    position: absolute;
+    left: 11vw;
+    width: 30vw;
+    height: 18vw;
+    top: 8.5vw;
+    gap: 1vw;
+}
+
+.select__item {
+    /* padding: 10px; */
+    cursor: pointer;
+    position: relative;
+    left: 1vw;
+    font-family: "Heebo", sans-serif;
+    text-align: center;
+    font-size: 1.5vw;
+    height: 2.5vw;
+    width: 15vw;
+    border-radius: 3px;
+    background: #eeeeee;
+    transition: background 0.1s;
+}
+
+.select__item--selected {
+    background: #009578;
+    color: #ffffff;
+}
+
+.selection-info {
+    position: absolute;
+    top: 8px;
+    left: 16vw;
+    font-size: 1.5vw;
+}
+.search-input {
+    width: 29vw;
+    position: absolute;
+    top: 2vw;
+    left: 12vw;
+    height: 2vw;
+    /* padding: 10px; */
+    font-size: 2vw;
+    font-family: "Heebo", sans-serif;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+button.add-button {
+    position: absolute;
+    top: 27.5vw;
+    left: 20vw;
+    width: 15vw;
+    /* padding: 10px; */
+    cursor: pointer;
+    font-size: 2vw;
+    font-family: "Heebo", sans-serif;
+    text-align: center;
+    height: 3.5vw;
+    border-color: #64B5F6;
+    border-radius: 3px;
+    background: #64B5F6;
+    transition: background 0.1s;
+}
